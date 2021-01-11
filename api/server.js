@@ -44,10 +44,10 @@ server.get('/api/dogs/:id', (req, res) => {
 })
 
 server.post('/api/dogs', (req, res) => {
-  // 1- pull info from request
+  // 1- pull info from request and validating a bit
   const dog = req.body
   if (!dog.name || !dog.weight) {
-    res.status(400)
+    res.status(400).json({ message: 'name and weight are required'})
   }
 })
 
