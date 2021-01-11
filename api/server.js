@@ -81,7 +81,7 @@ server.put('/api/dogs/:id', async (req, res) => {
     }
   }
 })
-
+-
 server.delete('/api/dogs/:id', (req, res) => {
   const { id } = req.params
   Dog.delete(id)
