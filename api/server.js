@@ -16,10 +16,14 @@ server.get('/api/dogs', (req, res) => {
   // 1- pull info from request (and validate it)
   // 2- interact with the database
   // 3- send the client appropriate response
+  Dog.findAll()
+    .then()
+    .catch()
 })
 
 server.get('/api/dogs/:id', (req, res) => {
-  
+ 
+
 })
 
 server.post('/api/dogs', (req, res) => {
