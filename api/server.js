@@ -25,7 +25,6 @@ server.get('/api/dogs', (req, res) => {
 
 server.get('/api/dogs/:id', (req, res) => {
  
-
 })
 
 server.post('/api/dogs', (req, res) => {
