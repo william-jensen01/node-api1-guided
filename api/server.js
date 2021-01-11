@@ -1,7 +1,7 @@
 // write the server here and export it
 const express = require('express') // CommonJS
 // import express from 'express'
-
+const Dog = require('./dog-model')
 const server = express() // instantiates an express app
 
 server.use(express.json()) // configures the app to read the body of requests
