@@ -52,6 +52,8 @@ server.post('/api/dogs', async (req, res) => {
     // 2- interact with the database
     try {
       const newlyCreated = await Dog.create(dog)
+      // 3- send the client appropriate response
+      res.status(201).json(newlyCreated)
     } catch (error) {
       res.status(500).json({ message: error.message })
     }
