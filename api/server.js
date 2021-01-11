@@ -13,5 +13,5 @@ server.get('/', (req, res) => {
 })
 
 // export this server so index.js can get it
-module.exports = server
-//
+module.exports = server  // CommonJS syntax
+// export default server // ES6 native modules syntax
