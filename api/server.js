@@ -4,4 +4,6 @@ const express = require('express') // CommonJS
 
 const server = express() // instantiates an express app
 
-server.use()
+server.use(express.json()) // configures the app to read the body of requests
+
+// buld a simple endpoint
