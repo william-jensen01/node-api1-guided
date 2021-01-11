@@ -14,7 +14,7 @@ server.get('/', (req, res) => {
 
 server.get('/api/dogs', (req, res) => {
   // 1- pull info from request (and validate it)
-  // 2- interact with the databse
+  // 2- interact with the database
   // 3- send the client appropriate response
 })
 
