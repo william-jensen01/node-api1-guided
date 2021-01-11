@@ -72,6 +72,11 @@ server.put('/api/dogs/:id', async (req, res) => {
       res.status(200).json(updated)
       // 3- send the client appropriate response
       const updated = await Dog.update(id, changes)
+      if (!updated) {
+        res.status(404).json({ message: `dog with id ${id} not found` })
+      } else {
+        res.status(200).json(updated)
+      }
     } catch (error) {
       res.status(500).json({ message: error.message })
     }
