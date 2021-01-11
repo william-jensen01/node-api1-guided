@@ -33,9 +33,9 @@ server.get('/api/dogs/:id', (req, res) => {
     .then(dog => {
       // 3- send the client appropriate response
       if (!dog) {
-        res.status(404).json({ message: `dog with id ${id} not found`})
+        res.status(404).json({ message: `dog with id ${id} not found` })
       } else {
-        
+        res.status(200).json(dog)
       }
     })
     .catch(error => {
