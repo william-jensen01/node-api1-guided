@@ -2,7 +2,7 @@
   "name": "gp",
   "version": "1.0.0",
   "scripts": {
-    "start": "",
+    "start": "node index.js",
     "ketchup": "git fetch && git reset --hard origin/lecture"
   },
   "repository": {
