@@ -69,10 +69,9 @@ server.put('/api/dogs/:id', async (req, res) => {
   } else {
     try {
       // 2- interact with the database
-      res.status(200).json(updated)
-      // 3- send the client appropriate response
       const updated = await Dog.update(id, changes)
       if (!updated) {
+        // 3- send the client appropriate response
         res.status(404).json({ message: `dog with id ${id} not found` })
       } else {
         res.status(200).json(updated)
