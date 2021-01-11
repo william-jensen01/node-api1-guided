@@ -67,10 +67,11 @@ server.put('/api/dogs/:id', async (req, res) => {
   if (!changes.name || !changes.weight || changes.adopter_id === undefined) {
     res.status(400).json({ message: 'all fields are required' })
   } else {
-    // 2- interact with the database
     try {
-      const updated = await Dog.update(id, changes)
+      // 2- interact with the database
       res.status(200).json(updated)
+      // 3- send the client appropriate response
+      const updated = await Dog.update(id, changes)
     } catch (error) {
       res.status(500).json({ message: error.message })
     }
