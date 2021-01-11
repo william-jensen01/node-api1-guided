@@ -30,26 +30,27 @@ server.get('/api/dogs/:id', (req, res) => {
   const { id } = req.params
   // 2- interact with the database
   Dog.findById(id)
-  .then(dog => {
-    // 3- send the client appropriate response
-    if (!dog) {
-      res.status(404).json({ message: `dog with id ${id} not found` })
-    } else {
-      res.status(200).json(dog)
-    }
-  })
-  .catch(error => {
-    res.status(500).json({ message: error.message })
-  })
+    .then(dog => {
+      // 3- send the client appropriate response
+      if (!dog) {
+        res.status(404).json({ message: `dog with id ${id} not found` })
+      } else {
+        res.status(200).json(dog)
+      }
+    })
+    .catch(error => {
+      res.status(500).json({ message: error.message })
+    })
 })
 
 server.post('/api/dogs', (req, res) => {
   // 1- pull info from request and validating a bit
   const dog = req.body
   if (!dog.name || !dog.weight) {
-    res.status(400).json({ message: 'name and weight are required'})
+    res.status(400).json({ message: 'name and weight are required' })
   } else {
-    
+    // 2- interact with the database
+
   }
 })
 
