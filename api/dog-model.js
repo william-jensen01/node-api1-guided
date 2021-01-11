@@ -9,7 +9,7 @@ module.exports = {
   findAll() {
     // SELECT * FROM dogs;
     return Promise.resolve(dogs)
-  },
+  }, // findAll().then().catch()
 
   findById(id) {
     // SELECT * FROM dogs WHERE id = 1;
