@@ -32,7 +32,9 @@ server.get('/api/dogs/:id', (req, res) => {
   Dog.findById(id)
     .then(dog => {
       // 3- send the client appropriate response
-
+      if (!dog) {
+        
+      }
     })
     .catch(error => {
       res.status(500).json({ message: error.message })
