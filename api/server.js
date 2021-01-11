@@ -15,14 +15,14 @@ server.get('/', (req, res) => {
 server.get('/api/dogs', (req, res) => {
   // 1- pull info from request (and validate it)
   Dog.findAll()
-  // 2- interact with the database
-  .then(dogs => {
-    // 3- send the client appropriate response
-    res.status(200).json(dogs)
-  })
-  .catch(error => {
-    res.status(500).json({ message: error.message })
-  })
+    // 2- interact with the database
+    .then(dogs => {
+      // 3- send the client appropriate response
+      res.status(200).json(dogs)
+    })
+    .catch(error => {
+      res.status(500).json({ message: error.message })
+    })
 })
 
 server.get('/api/dogs/:id', (req, res) => {
@@ -30,6 +30,13 @@ server.get('/api/dogs/:id', (req, res) => {
   const { id } = req.params
   // 2- interact with the database
   Dog.findById(id)
+    .then(dog => {
+      // 3- send the client appropriate response
+
+    })
+    .catch(error => {
+      res.status(500).json({ message: error.message })
+    })
 })
 
 server.post('/api/dogs', (req, res) => {
