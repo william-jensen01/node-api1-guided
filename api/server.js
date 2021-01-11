@@ -45,7 +45,7 @@ server.get('/api/dogs/:id', (req, res) => {
 
 server.post('/api/dogs', (req, res) => {
   // 1- pull info from request
-
+  const dog = 
 })
 
 server.put('/api/dogs/:id', (req, res) => {
