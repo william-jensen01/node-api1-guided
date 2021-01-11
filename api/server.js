@@ -6,4 +6,6 @@ const server = express() // instantiates an express app
 
 server.use(express.json()) // configures the app to read the body of requests
 
-// buld a simple endpoint
+// build a simple endpoint
+// [GET] /
+server.get('/')
