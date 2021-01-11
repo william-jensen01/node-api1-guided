@@ -46,7 +46,9 @@ server.get('/api/dogs/:id', (req, res) => {
 server.post('/api/dogs', (req, res) => {
   // 1- pull info from request
   const dog = req.body
-
+  if (!dog.name || !dog.weight) {
+    res.status(400)
+  }
 })
 
 server.put('/api/dogs/:id', (req, res) => {
