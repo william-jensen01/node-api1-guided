@@ -4,3 +4,4 @@ const express = require('express') // CommonJS
 
 const server = express() // instantiates an express app
 
+server.use()
