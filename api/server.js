@@ -65,9 +65,10 @@ server.put('/api/dogs/:id', (req, res) => {
   const id = req.params.id
   const changes = req.body
   if (!changes.name || !changes.weight || changes.adopter_id === undefined) {
-    
+    res.status(400).json({ message: 'all fields are required' })
+  } else {
+    // 2- interact with the database
   }
-
 })
 
 server.delete('/api/dogs/:id', (req, res) => {
