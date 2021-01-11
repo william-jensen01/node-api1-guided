@@ -60,7 +60,7 @@ server.post('/api/dogs', async (req, res) => {
   }
 })
 
-server.put('/api/dogs/:id', (req, res) => {
+server.put('/api/dogs/:id', async (req, res) => {
   // 1- pull info from request and validating a bit
   const id = req.params.id
   const changes = req.body
@@ -68,6 +68,7 @@ server.put('/api/dogs/:id', (req, res) => {
     res.status(400).json({ message: 'all fields are required' })
   } else {
     // 2- interact with the database
+    const updated = await Dog.update(id, changes) 
   }
 })
 
