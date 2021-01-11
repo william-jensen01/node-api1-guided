@@ -43,14 +43,18 @@ server.get('/api/dogs/:id', (req, res) => {
     })
 })
 
-server.post('/api/dogs', (req, res) => {
+server.post('/api/dogs', async (req, res) => {
   // 1- pull info from request and validating a bit
   const dog = req.body
   if (!dog.name || !dog.weight) {
     res.status(400).json({ message: 'name and weight are required' })
   } else {
     // 2- interact with the database
-
+    try {
+      const newlyCreated = await Dog.create(dog)
+    } catch (error) {
+      res.status(500).json({ message: error.message })
+    }
   }
 })
 
