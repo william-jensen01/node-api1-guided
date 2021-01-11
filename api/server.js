@@ -18,7 +18,9 @@ server.get('/api/dogs', (req, res) => {
   // 3- send the client appropriate response
   Dog.findAll()
     .then()
-    .catch()
+    .catch(error => {
+      res.status(500).json({ message: error.message })
+    })
 })
 
 server.get('/api/dogs/:id', (req, res) => {
