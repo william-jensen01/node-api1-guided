@@ -29,7 +29,7 @@ server.get('/api/dogs/:id', (req, res) => {
   // 1- pull info from request
   const { id } = req.params
   // 2- interact with the database
-
+  Dog.findById(id)
 })
 
 server.post('/api/dogs', (req, res) => {
