@@ -61,6 +61,8 @@ server.post('/api/dogs', async (req, res) => {
 })
 
 server.put('/api/dogs/:id', (req, res) => {
+  const id = req.params.id
+  
 
 })
 
