@@ -8,5 +8,8 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/LambdaSchool/node-api1-guided.git"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
   }
 }
