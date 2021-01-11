@@ -12,6 +12,14 @@ server.get('/', (req, res) => {
   res.json({ message: 'hello world' })
 })
 
+server.get('/api/dogs', (req, res) => {
+
+})
+
+server.get('/api/dogs/:id', (req, res) => {
+  
+})
+
 // export this server so index.js can get it
 module.exports = server  // CommonJS syntax
 // export default server // ES6 native modules syntax
