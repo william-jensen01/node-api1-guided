@@ -20,6 +20,18 @@ server.get('/api/dogs/:id', (req, res) => {
   
 })
 
+server.post('/api/dogs', (req, res) => {
+
+})
+
+server.put('/api/dogs/:id', (req, res) => {
+
+})
+
+server.delete('/api/dogs/:id', (req, res) => {
+
+})
+
 // export this server so index.js can get it
 module.exports = server  // CommonJS syntax
 // export default server // ES6 native modules syntax
