@@ -17,7 +17,9 @@ server.get('/api/dogs', (req, res) => {
   // 2- interact with the database
   // 3- send the client appropriate response
   Dog.findAll()
-    .then()
+    .then(dogs => {
+      
+    })
     .catch(error => {
       res.status(500).json({ message: error.message })
     })
