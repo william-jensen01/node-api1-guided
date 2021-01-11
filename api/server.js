@@ -8,4 +8,6 @@ server.use(express.json()) // configures the app to read the body of requests
 
 // build a simple endpoint
 // [GET] /
-server.get('/')
+server.get('/', (req, res) => {
+  res.json({  })
+})
