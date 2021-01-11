@@ -27,7 +27,8 @@ server.get('/api/dogs', (req, res) => {
 
 server.get('/api/dogs/:id', (req, res) => {
   // 1- pull info from request
-  const id 
+  const { id } = req.params
+  // 2- interact with the database
 
 })
 
