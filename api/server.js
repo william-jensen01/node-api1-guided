@@ -61,8 +61,10 @@ server.post('/api/dogs', async (req, res) => {
 })
 
 server.put('/api/dogs/:id', (req, res) => {
+  // 1- pull info from request and validating a bit
   const id = req.params.id
-  
+  const changes = req.body
+  if (!)
 
 })
 
